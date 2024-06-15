@@ -1,0 +1,121 @@
+*{
+    box-sizing: border-box;
+    /* border: 1px solid #000; */
+    font-family: Cambria;
+}
+
+a{
+    text-decoration: none;
+    color: #000;
+}
+
+/* 滿版設定 */
+html, body{
+    height: 100%;
+}
+
+h1, h2, p {
+    margin: 0;
+}
+/* background wrapper */
+.wrapper{
+    height: 100%;
+    background-color: #ccc;
+    background: linear-gradient(#fffb00, #f8f7be);
+    overflow: hidden;
+}
+
+/* card setting */
+.idle{
+    width: 800px;
+    height: 600px;
+    background-color: #fff;
+    box-shadow: 0 20px 80px 0 rgba(0, 0, 0, 0.5);
+
+    /* middle setting 
+        1. diplay block
+        2. have width
+        3. margin left right: auto
+    */
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 128px;
+
+    padding: 10px;
+    border-radius: 5px;
+
+}
+
+.idle .info{
+    display: inline-block;;
+    width: 50%;
+    vertical-align: top;
+    padding: 36px 28px;
+    background-color: #f9f9ff;
+    height: 100%;
+}
+.idle .image{
+    display: inline-block;;
+    width: 50%;
+    height: 600px;
+    overflow: hidden;
+}
+
+.idle .image img{
+    /* height: 100%; */
+    width: 400px;
+    display: block;
+    padding: 10px;
+}
+
+.idle .team{
+    font-size: 40px;
+    font-weight: 1000;
+    color: #000000;    
+}
+
+.idle .name{
+    font-size: 100px;
+    font-weight: 500;
+    color: #ffae00;
+    -webkit-text-stroke: 1px #de0f0f;
+    /* border: 3px solid #ccc; */
+    white-space: nowrap;
+    margin-bottom: 16px;
+    text-shadow: 0 48px 10px rgba(0, 0, 0, 0.1);
+
+    /* position layer setting */
+    position: relative;
+    z-index: 10;
+}
+.idle .pos{
+    font-size: 40px;
+    font-weight: 500;
+    color: #ff1515;
+    margin-bottom: 16px;
+}
+.idle .des{
+    font-size: 20px;
+    line-height: 24px;
+    color: #fa4b4b;
+    margin-bottom: 16px;
+}
+
+.idle .btn{
+    display: inline-block;
+    /* method 1 */
+    padding: 12px 40px;
+    line-height: 24px;
+    /* method 2 */
+    /* text-align: center;
+    width: 200px; */
+    text-decoration: none;
+    letter-spacing: 3px;
+    color: #fff;
+    font-weight: bold;
+    box-shadow: 0 8px 40px 0 rgba(0, 0, 0, 0.3);
+
+    background-color: #ff9408;
+    background: rgb(255,221,176);
+    background: linear-gradient(223deg, rgba(255,221,176,1) 0%, rgba(255,148,8,1) 100%);
+}

@@ -1,6 +1,7 @@
 *{
     box-sizing: border-box;
     /* border: 1px solid #000; */
+    position: relative;
     font-family: Cambria;
 }
 
@@ -11,18 +12,102 @@ a{
 
 /* 滿版設定 */
 html, body{
-    height: 100%;
+    min-height: 100%;
 }
 
 h1, h2, p {
     margin: 0;
 }
+ul{
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
 /* background wrapper */
 .wrapper{
-    height: 100%;
+    min-height: 100%;
     background-color: #ccc;
-    background: linear-gradient(#fffb00, #f8f7be);
+    background: linear-gradient(#7ba6de, #ffffff);
     overflow: hidden;
+}
+
+/* layout */
+.container{
+    width: 960px;
+    min-height: 100%;
+    display: block;
+    /* 上下0 左右auto */
+    margin: 0 auto;
+    /* border: 1px solid #000; */
+}
+
+/* utility */
+.clearfix:after{
+    content: '';
+    display: block;
+    clear: both;
+}
+
+/* component */
+/* navbar */
+.navbar{
+    height: 64px;
+    background-color: #fff;
+    position: fixed;
+    width: 100%;
+    box-shadow: 0 3px 5px rgba(0, 0, 0, 0.3);
+    padding: 0 16px;
+    z-index: 999;
+}
+
+.navbar .logo{
+    display: inline-block;
+    width: 40px;
+    height: 40px;
+    /* border: 1px solid #000; */
+    background-image: url('../images/LE_SSERAFIM_logo.svg.png');
+    background-size: contain;
+    background-repeat: no-repeat;
+    margin-top: 12px;
+
+    float: left;
+}
+
+.navbar .nav{
+    /* border: 1px solid #000; */
+    float: right;
+}
+.navbar p{
+    float: left;
+}
+
+.navbar .nav .nav-item{
+    float: left;
+    margin-left: 32px;
+}
+
+.navbar .nav .nav-link{
+    display: inline-block;
+    color: #000000;
+    line-height: 24px;
+    padding: 20px 0;
+    /* border: 1px solid #000; */
+}
+
+.navbar .nav .nav-link:after{
+    content: '';
+    position: absolute;
+    left: 50%;
+    transform: translate(-50%, 0);
+    bottom: 0;
+    width: 0;
+    height: 4px;
+    background-color: #7ba6de;
+    transition: all 0.3s;
+}
+
+.navbar .nav .nav-link:hover:after{
+    width: 100%;
 }
 
 /* card setting */
@@ -75,10 +160,10 @@ h1, h2, p {
 }
 
 .idle .name{
-    font-size: 100px;
+    font-size: 90px;
     font-weight: 500;
-    color: #ffae00;
-    -webkit-text-stroke: 1px #de0f0f;
+    color: #7ba6de;
+    -webkit-text-stroke: 0.5px #ffb41f;
     /* border: 3px solid #ccc; */
     white-space: nowrap;
     margin-bottom: 16px;
@@ -91,13 +176,13 @@ h1, h2, p {
 .idle .pos{
     font-size: 40px;
     font-weight: 500;
-    color: #ff1515;
+    color: #ff5c16;
     margin-bottom: 16px;
 }
 .idle .des{
     font-size: 20px;
     line-height: 24px;
-    color: #fa4b4b;
+    color: #fb814d;
     margin-bottom: 16px;
 }
 
@@ -115,7 +200,26 @@ h1, h2, p {
     font-weight: bold;
     box-shadow: 0 8px 40px 0 rgba(0, 0, 0, 0.3);
 
-    background-color: #ff9408;
+    background-color: #7ba6de;
     background: rgb(255,221,176);
-    background: linear-gradient(223deg, rgba(255,221,176,1) 0%, rgba(255,148,8,1) 100%);
+    background: linear-gradient(223deg, rgb(176, 218, 255) 0%, rgb(8, 90, 255) 100%);
+}
+
+.footer{
+    height: 180px;
+    background-color: #ffffff;
+    padding: 12px 24px;
+    margin-top: 40px;
+    border-top: solid 2px #6c6c6c;
+}
+
+.footer h2{
+    display: block !important;
+    font-size: 50px;
+    /* float: left; */
+}
+
+.footer p{
+    display: block;
+    font-size: 30px;
 }
